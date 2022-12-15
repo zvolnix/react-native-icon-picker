@@ -27,10 +27,10 @@ const iconComponents = {
   MaterialIcons,
 };
 const ICON_COLOR_SELECTED_COLOR = "white";
-const ICON_COLOR = "#999999";
-const ICON_SIZE = 20;
-const MODAL_CLOSE_COLOR = "#000000";
-const MODAL_CLOSE_ICON_SIZE = 20;
+const ICON_COLOR = "#CE1226";
+const ICON_SIZE = 30;
+const MODAL_CLOSE_COLOR = "#fff";
+const MODAL_CLOSE_ICON_SIZE = 40;
 class IconPicker extends Component {
   renderItem = (data) => {
     let selectedIconContainerStyle = this.props.selectedIconContainerStyle
@@ -97,7 +97,7 @@ class IconPicker extends Component {
               {/* header */}
               <View style={[styles.modalHeader]}>
                 <View style={[styles.modalHeaderWrapper]}>
-                  <View>
+                <View>
                     <Text style={styles.modalTitle}>{headerTitle}</Text>
                   </View>
                   <TouchableOpacity onPress={this.props.toggleIconPicker}>
@@ -107,10 +107,12 @@ class IconPicker extends Component {
                       color={MODAL_CLOSE_COLOR}
                     />
                   </TouchableOpacity>
+                 
                 </View>
               </View>
               {/* Content */}
-              <ScrollView style={[styles.modalContent]}>
+              <ScrollView style={[styles.modalContent]} showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}>
                 <View style={styles.iconContainer}>
                   {this.renderItem(data)}
                 </View>

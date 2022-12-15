@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
-const COLOR_DARK_GREY = "#999999";
+const COLOR_RED = "#CE1226";
 const COLOR_WHITE = "#FFFFFF";
-const COLOR_LIGHT_GREY = "#EFEFEF";
+
 
 export default StyleSheet.create({
   wrapper: {
@@ -13,15 +13,18 @@ export default StyleSheet.create({
   content: {
     flexDirection: "column",
     backgroundColor: COLOR_WHITE,
-    maxHeight: "50%",
+    maxHeight: "90%",
     borderRadius: 10,
     width: "85%",
   },
   modalHeader: {
     flexDirection: "column",
-    borderColor: COLOR_LIGHT_GREY,
+    borderColor: COLOR_RED,
     borderBottomWidth: 2,
-    padding: 20,
+    padding: 10,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    backgroundColor: COLOR_RED,
   },
   modalHeaderWrapper: {
     flexDirection: "row",
@@ -30,9 +33,10 @@ export default StyleSheet.create({
     alignContent: "center",
   },
   modalTitle: {
-    fontSize: 16,
+    fontSize: 18,
     lineHeight: 20,
     fontWeight: "700",
+    color:  '#fff',
   },
   modalContent: {
     padding: 10,
@@ -41,25 +45,22 @@ export default StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "flex-start",
+    justifyContent: "space-evenly",
     alignContent: "flex-start",
     alignItems: "flex-start",
     marginBottom: 20,
-    paddingHorizontal: "5%",
+
   },
   item: {
     margin: 5,
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    borderColor: COLOR_DARK_GREY,
-    borderWidth: 1,
+    width: "20%",
+    height: 60,
+    borderColor: COLOR_RED,
     justifyContent: "center",
     alignItems: "center",
     alignContent: "center",
-    borderWidth: 2,
   },
   selectedItem: {
-    backgroundColor: COLOR_DARK_GREY,
+    backgroundColor: COLOR_RED,
   },
 });
